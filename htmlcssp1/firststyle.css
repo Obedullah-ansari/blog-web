@@ -1,0 +1,655 @@
+*{
+    margin :0px;
+    padding :0px;
+    font-family: 'poppins' ,'sans-serif';
+   
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../eduford_img/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+display:flex;
+justify-content: space-between;
+align-items: center;
+padding: 2% 6%;
+}
+nav img{
+    width: 150px;
+}
+.nav-link{
+     flex:1;
+     text-align: right;
+    
+}
+.nav-link ul li{
+    list-style: none;
+    display : inline-block;
+    padding :8px 12px;
+    position :relative;  
+}
+.nav-link ul li a{
+    text-decoration: none;
+    color :#fff;
+    font-size:16px;
+}
+.nav-link ul li::after{
+    content : '';
+    width: 0%;
+    height:3px;
+    background:#f44336 ;
+    display:block;
+    margin :auto;
+    transition: 0.5s;
+}
+.nav-link ul li:hover::after{
+    width:100%;
+}
+.text-box{
+    width :90%;
+    color: #fff;
+    position: absolute;
+     top :50%;
+    left:50%; 
+    transform: translate(-50% ,-50%);
+    text-align: center;
+
+}
+.text-box h1{
+    font-size:62px;
+}
+.text-box p{
+    margin: 10px 0px 40px;
+    font-size: 14px;
+    color:#fff;
+}
+.hero{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid white;
+    padding: 12px 34px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero:hover{
+    border: 1px solid #f44336;
+    background-color: #f44336;
+    transition: 0.5s;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width :700px) {
+    .text-box h1{
+        font-size:20px;
+    } 
+    .nav-link ul li{
+        display: block;
+    }
+ 
+    .nav-link{
+        position: fixed;
+        background:#f44336;
+        height: 100vh;
+        width:200px;
+        top: 0px;
+        right:-200px;
+        text-align:left;
+        z-index:2;
+        transition:.3s;
+    }
+    nav .fa{
+        display:block;
+        color:#fff;
+        margin:10px;
+        font-size:22px;
+        cursor :pointer;
+    }
+    .nav-link ul{
+        padding :30px;
+    
+    }
+}
+/* ---------------------------------------course------------------------------------------------------ */
+section.course{
+    width:80%;
+    text-align: center;
+    margin:auto;
+    padding-top:100px;
+} 
+.course h1{
+    font-size:36px;
+    font-weight: 600;
+}
+section.course p{
+    color:#777;
+    font-size:14px;
+    font-weight: 300px;
+    line-height:22px;
+    padding:10px;
+}
+div.course-row{
+    margin :5%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+div.col{
+  background: #f6dada;
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+.col p{
+    text-align: left;
+}
+div.col h3{
+    text-align: center;
+    font-weight: 600;
+    margin:10px 0px;
+
+
+}
+div.col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+@media(max-width:700px){
+    section.campus{
+        /* text-align: center; */
+        margin-left: 40px;
+        }
+    div.course-row{
+        flex-direction: column;
+    }
+  
+}
+/* -------------------------------------------------------------------------campus------------------------------------ */
+.campus{
+
+width :80%;
+
+margin:auto;
+
+padding-top:50px;
+}
+
+.text-global{
+    text-align: center;
+}
+.campus-row{
+    margin-top: 5%;
+    display: flex;
+    height: 70vh;
+    justify-content:space-between;
+    box-sizing: border-box;
+}
+.campus-col {
+position: relative;
+width: 100%;
+height: 70vh;
+}
+
+.campus-col img{
+    border-radius: 10px;
+    height: 100%;
+    width: 85%;
+}
+.layer{
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    height: 100%;
+    width: 85%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:transparent;
+    transition: 0.7s;
+   
+}
+.layer:hover{
+    background: rgba(241, 6, 6, 0.7); 
+}
+.layer h3{
+    color:#fff;
+    font-weight: 500;
+    font-size: 26px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+      
+}
+.layer:hover h3{
+    bottom: 49%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+@media(max-width:700px){
+    
+    div.campus-row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 300px;
+        margin-left: 40px;
+    }
+    div.campus-col{
+        margin-bottom: 20px;
+    }
+ 
+  
+}
+
+/* ---------------------------------------facilites----------------------------------- */
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+}
+.facilities-row{
+    display: flex;
+    margin-top: 4%;
+    justify-content: space-between;
+    text-align: left;
+}
+.facilities-col{
+    width: 300px;
+}
+.facilities-col img{
+ width: 300px;
+ height: 250px;
+ border-radius: 8px;
+}
+.facilities-col p{
+    padding-bottom: 20px;
+    text-align: left;
+}
+.facilities-col h3{
+margin-top: 16px;
+margin-bottom: 15px;
+text-align: left;
+}
+@media(max-width:700px){
+    section.facilities{
+    text-align: center;
+    margin-left: 45px;
+    }
+    div.facilities-row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    section.facilities{
+        margin-top: 250px;
+    }
+    
+}
+/* -------------------------------------testimonials----------------------------------- */
+.testimonials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
+.testimonials-row{
+    display: flex;
+    margin-top: 4%;
+    justify-content: space-between;
+   box-sizing: border-box;
+}
+.testimonials-col{
+    width: 580px;
+    height: 230px;
+    background-color: #95eec5;
+    display:flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: left;
+  
+}
+
+.testimonials-col img{
+    width: 70px;
+    height: 70px;
+    border-radius: 200px;
+    padding: 10px;
+   }
+
+.testimonials-col p{
+ padding: 10px;
+}
+.testimonials-col h2{
+    padding: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+   }
+.testimonials-col .fa{
+     color: #436b78;
+   }
+   
+ @media(max-width:700px){
+    section.testimonials{
+        text-align: center;
+      
+        }
+    div.testimonials-row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    div.testimonials-col{
+        width: 300px;
+        height: 450px;
+        margin-bottom: 30px;
+    }
+}
+
+/* ----------------------------------cta------------------------------------------- */
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../eduford_img/banner2.jpg);
+    background-position: center;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta  h1{
+    color: #fff;
+    padding: 0;
+    margin-bottom: 40px;
+}
+@media(max-width:700px){
+  .cta h1{
+    font-size: 24px;
+  }
+}
+/* -----------------------------footer------------------------------------- */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+ margin-bottom: 25px;
+ margin-top: 20px;
+ font-weight: 600;
+}
+.footer p{
+    margin: 20px;
+}
+.icons .fa{
+    margin: 10px;
+    padding: 5px;
+    font-size:large;
+    color:#f44336;
+    cursor: pointer;
+}
+ .fa-heart-o{
+    color: #f44336;
+}
+/* -------------------------------------------------------------about us page-------------------------------------------------- */
+.sub-header{
+    min-height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../eduford_img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+.sub-header h1{
+    color: white;
+    margin-top: 100px;
+}
+.about-row{
+    display: flex;
+    justify-content:space-around;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    width: 450px; 
+}
+.about-col img{
+    width: 450px;
+    height: 300px;
+    border-radius: 5px;
+}
+.about-col p{
+    padding: 15px 0px 25px;
+}
+.red-btn{
+    color: black;
+    border: 1px solid black;
+    padding: 12px 34px;
+    background: transparent;
+}
+.red-btn:hover{
+    color: white;
+    
+}
+@media(max-width:700px){
+    .about-row{
+        flex-direction: column;
+    }
+    .about-col{
+        width: 300px; 
+    }
+    .about-col img{
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+        padding-top: 30px;
+
+    }
+}
+/* -----------------------------------------coursepage-------------------------------------------- ------------------------------------------*/
+.sub-changes{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+
+}
+@media(max-width:700px){
+    .sub-changes{
+        padding-top: 50px;
+    
+    } 
+}
+/* ...................................blog................................................................................................. */
+.blog-content{
+    width: 80%;
+    margin:auto;
+    padding: 60px 0px;
+   
+}
+.blog-row{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.blog-left{
+    width: 800px;
+    height: 600px;
+    box-sizing: border-box;
+    overflow:auto;
+ 
+}
+.blog-right{
+    width: 400px;
+   
+}
+.blog-left img{
+  width: 730px;
+  height: 450px;
+}
+.blog-left h2{
+color: #222;
+font-weight: 600px;
+margin: 30px 0px;
+}
+.blog-right h3{
+ text-align: center;
+   
+}
+.blog-left p{
+    color:#696767;
+    padding: 0px;
+}
+.blog-right h3{
+background:#f44336;
+color: #fff;
+padding: 7px 0px;
+font-size: 16px;
+}
+
+.blog-right div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    color:#555;
+    padding: 8px;
+}
+.comment{
+    border: 1px solid #807b7b;
+    margin : 50px 0px;
+    padding: 10px 20px;
+
+}
+.comment-form input{
+width: 100%;
+padding: 10px;
+margin: 15px 0;
+box-sizing: border-box;
+border: none;
+outline: none;
+background: #f0f0f0;
+}
+.comment-form textarea{
+ width: 100%;
+padding: 10px;
+margin: 15px 0;
+box-sizing: border-box;
+border: none;
+outline: none;
+background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+@media(max-width:700px){
+   .blog-row{
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+   }
+   .blog-left{
+    width: 350px;
+    box-sizing: border-box;
+    text-align: center;
+
+    
+}
+.blog-left img{
+    width: 390px;
+    height: 290px;
+  }
+  .blog-right{
+    width: 350px;
+      
+}
+}
+/* -------------------------------------------------contac us----------------------------- */
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0px;
+}
+.location iframe{
+    width: 100%;
+}
+.Contact-us{
+    width: 80%;
+   margin: auto;
+}
+.Contact-row{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.contact-col{
+   margin-bottom: 30px;
+   width: 450px;
+   box-sizing: border-box;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+   
+}
+.contact-col div span{
+    padding: 30px;
+}
+.contact-col div .fa{
+    color: #f44336;
+    font-size: large;
+}
+.contact-col div p{
+    padding: 0%;
+    color: #555;
+
+}
+.contact-col div h5{
+ font-size: 20px;
+ margin-bottom: 5px;
+ color: #383838;
+ font-weight: 400;
+}
+.contact-col input,.contact-col textarea{
+    width: 100%;
+    padding: 15px; 
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+@media(max-width:700px){
+    .Contact-row{
+        flex-direction: column;
+    }
+    .contact-col{
+        margin-bottom: 30px;
+        width: 300px;
+       
+     }
+}
